@@ -47,15 +47,6 @@ We expose our capabilities through a secure, documented API, ensuring that the c
 *   **ML/NLP**: Transformers (Embeddings), Scikit-learn (Clustering)
 *   **API**: FastAPI / Flask
 
-## How It Works: The Recommendation Engine
-
-At the heart of LibRaX is a high-performance similarity search engine. Here is the conceptual workflow:
-
-1.  **Vectorization**: Every book in our database is converted into a high-dimensional vector (embedding) that represents its semantic meaning—plot, tone, writing style, etc.
-2.  **Indexing**: We use **FAISS** to index these vectors efficiently. FAISS allows us to search through millions of vectors in milliseconds.
-3.  **Querying**: When a user likes a book or searches for a query, we convert that input into a vector.
-4.  **Similarity Search**: The engine finds the "nearest neighbors" in the high-dimensional space. Books that are mathematically close to each other are semantically similar, resulting in highly relevant recommendations.
-
 ### 🔐 APK Source Code Access
 The core backend + machine learning engine for LibRaX is private and not publicly available.
 However, access to the **APK source code** (Android client only) may be granted upon request
@@ -67,21 +58,6 @@ Access may be granted for:
 • Academic evaluation
 
 👉 Request APK Source Access: sarathjata@outlook.com
-
-## Setup (Android Client)
-
-To build and run the Android application locally:
-
-1.  **Prerequisites**:
-    *   Android Studio Hedgehog or later.
-    *   JDK 17.
-2.  **Clone**:
-    ```bash
-    git clone https://github.com/your-username/librax-android.git
-    ```
-3.  **Open**: Open the project in Android Studio.
-4.  **Sync**: Allow Gradle to sync dependencies.
-5.  **Run**: Select an emulator or physical device and click **Run**.
 
 ## Contact
 
