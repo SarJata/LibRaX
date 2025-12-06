@@ -20,8 +20,9 @@ The LibRaX ecosystem is architected into two distinct components: a **Public Fro
 
 ### Public vs. Private Components
 
-*   **Public Repository (This Repo)**: Contains the Android client code. We believe in transparency regarding our user interface and client-side logic. This allows developers to inspect the app's behavior, security, and UI implementation.
-*   **Private Repository (Backend & ML)**: Contains the core machine learning pipeline, including the **FAISS** index, embedding generation models, and proprietary clustering algorithms.
+*   **Public Repository (This Repo)**: Contians the Application Package File (APK) for local execution
+*   **Private Repository (Android Source Code)**: Contains the Source Code for the APK file that can be reconstructed and Verified. Access shall be provided under conditions mentioned below.
+*   **Private Repository (ML)**: Contains the core machine learning pipeline, including the **FAISS** index, embedding generation models, and proprietary clustering algorithms.
 
 ### Why is the Backend Private?
 
