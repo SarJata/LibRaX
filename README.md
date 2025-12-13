@@ -1,67 +1,79 @@
-# LibRaX — Where Books Find You
+# LibRaX
 
-## Overview
+LibRaX is an AI-assisted book discovery and recommendation system designed to help readers
+find books through semantic, content-based matching rather than simple keyword or genre filters.
 
-**LibRaX** is an AI-assisted book discovery and recommendation system designed to help readers find their next favorite book through intelligent, content-based matching. Unlike traditional keyword searches, LibRaX understands the *context* and *nuance* of book content.
+This repository hosts the **public Android client (APK)**, which serves as the user-facing
+interface for the LibRaX recommendation system.
 
-This repository hosts the **public Android client**, built with modern mobile technologies like **Jetpack Compose** and **Material 3**. It serves as the polished, user-facing interface for our powerful recommendation engine.
+---
 
 ## Features
+- **AI-Powered Recommendations**: Book discovery based on semantic similarity.
+- **Modern Android UI**: Built using Jetpack Compose with a reactive UI architecture.
+- **Material 3 Design**: Clean, accessible interface following modern Android guidelines.
+- **Real-Time Search**: Instant feedback while browsing and searching.
+- **Personalized Feeds**: Recommendations influenced by reading history and preferences.
 
-*   **AI-Powered Recommendations**: Discover books based on semantic similarity rather than just genre tags.
-*   **Modern Android UI**: Built entirely with Jetpack Compose for a fluid, reactive user experience.
-*   **Material 3 Design**: Adheres to the latest Google design guidelines for a clean, accessible, and beautiful interface.
-*   **Real-time Search**: Instant feedback as you explore the library.
-*   **Personalized Feeds**: Curated lists based on your reading history and preferences.
+---
 
-## Architecture & Design Philosophy
+## Architecture Overview
 
-The LibRaX ecosystem is architected into two distinct components: a **Public Frontend** and a **Private Backend**.
+LibRaX is designed as a two-part system:
 
-### Public vs. Private Components
+### Public Component
+- **Android Client (APK)**  
+  This repository provides the compiled Android application for local execution and feature demonstration.
 
-*   **Public Repository (This Repo)**: Contians the Application Package File (APK) for local execution
-*   **Private Repository (Android Source Code)**: Contains the Source Code for the APK file that can be reconstructed and Verified. Access shall be provided under conditions mentioned below.
-*   **Private Repository (ML)**: Contains the core machine learning pipeline, including the **FAISS** index, embedding generation models, and proprietary clustering algorithms.
+### Private Components
+- **Android Source Code (Private)**  
+  The full Android source code corresponding to the APK.
+- **Backend & ML Pipeline (Private)**  
+  Includes the recommendation service, vector search index, and embedding generation logic.
 
-### Why is the Backend Private?
+---
 
-The decision to keep the backend closed-source is a strategic measure to protect:
-1.  **Intellectual Property**: The specific tuning of our embedding models and clustering logic represents significant R&D effort.
-2.  **Proprietary Data**: The training datasets used to refine our recommendations are curated internally.
-3.  **Security**: Limiting exposure of the raw model internals reduces the attack surface against our API and data integrity.
+## Why the Backend Is Private
 
-We expose our capabilities through a secure, documented API, ensuring that the client can leverage the full power of the ML engine without exposing its internal mechanics.
+The backend and ML components are maintained in a private repository due to:
+- Use of internally curated datasets
+- Custom tuning of embedding and similarity search logic
+- Security considerations around exposed APIs
+
+The Android client interacts with the backend through a well-defined API, allowing full
+functionality without exposing internal implementation details.
+
+---
 
 ## Tech Stack
 
-### Frontend (Public)
-*   **Language**: Kotlin
-*   **UI Framework**: Jetpack Compose
-*   **Design System**: Material 3
-*   **Architecture**: MVVM (Model-View-ViewModel)
-*   **Networking**: Retrofit / OkHttp
+### Android Client (Public)
+- **Language:** Kotlin
+- **UI:** Jetpack Compose, Material 3
+- **Architecture:** MVVM
+- **Networking:** Retrofit, OkHttp
 
-### Backend (Private)
-*   **Language**: Python
-*   **Vector Search**: FAISS (Facebook AI Similarity Search)
-*   **ML/NLP**: Transformers (Embeddings), Scikit-learn (Clustering)
-*   **API**: FastAPI / Flask
+### Backend & ML (Private)
+- **Language:** Python
+- **API:** FastAPI
+- **Vector Search:** FAISS
+- **ML/NLP:** Transformer-based embeddings, scikit-learn utilities
 
-### 🔐 APK Source Code Access
-The core backend + machine learning engine for LibRaX is private and not publicly available.
-However, access to the **APK source code** (Android client only) may be granted upon request
-for technical review, recruitment, or collaboration purposes.
+---
 
-Access may be granted for:
-• Recruiters reviewing Android development capability
-• Research or collaboration review
-• Academic evaluation
+## APK Source Code Access
 
-👉 Request APK Source Access: sarathjata@outlook.com
+The Android source code and backend repositories are private.
+Access may be granted upon request for:
+- Recruiter technical review
+- Academic evaluation
+- Research or collaboration
 
-## Contact
+📩 **Contact:** sarathjata@outlook.com
 
-*   **Developer**: Jatavallabhula Sarat Anirudh
-*   **Email**: sarathjata@outlook.com
-*   **LinkedIn**: https://www.linkedin.com/in/saratjata/
+---
+
+## Author
+**Jatavallabhula Sarat Anirudh**  
+📧 sarathjata@outlook.com  
+🔗 https://www.linkedin.com/in/saratjata/
